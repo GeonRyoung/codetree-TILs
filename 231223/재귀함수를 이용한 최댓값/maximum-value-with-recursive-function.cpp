@@ -2,7 +2,7 @@
 
 int arr[100];
 int max(int x){
-  if(x==1)
+  if(x==0)
     return arr[x];
   return max(x-1)>arr[x]?max(x-1):arr[x];
 }
