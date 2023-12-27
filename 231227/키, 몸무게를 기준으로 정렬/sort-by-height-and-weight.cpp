@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+class person{
+  public:
+    string name;int height;int weight;
+    person(string name=" ",int height=0,int weight=0){
+      this->name=name;
+      this->height=height;
+      this->weight=weight;
+    }
+};
+
+bool cmp(person a,person b){
+  if(a.height==b.height){
+    return a.weight > b.weight;
+  }
+  return a.height <b.height;
+}
+int main(){
+  person p[10];
+  int n;
+  (void)scanf("%d",&n);
+  for(int i=0;i<n;i++){
+    cin >> p[i].name >> p[i].height >> p[i].weight;
+  }
+  sort(p,p+5,cmp);
+  for(int i=0;i<5;i++){
+    cout << p[i].name << " " << p[i].height << " " << p[i].weight << endl;
+  }
+}
