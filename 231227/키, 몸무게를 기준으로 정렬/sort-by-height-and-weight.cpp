@@ -26,7 +26,9 @@ int main(){
   int n;
   (void)scanf("%d",&n);
   for(int i=0;i<n;i++){
-    cin >> p[i].name >> p[i].height >> p[i].weight;
+    string name;int height;int weight;
+    cin >> name >> height >> weight;
+    p[i]=person(name,height,weight);
   }
   sort(p,p+5,cmp);
   for(int i=0;i<5;i++){
