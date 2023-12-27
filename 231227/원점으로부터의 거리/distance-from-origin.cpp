@@ -16,6 +16,8 @@ class point{
 };
 
 bool menhaton(point a,point b){
+  if(abs(a.x)+abs(a.y)==abs(b.x)+abs(b.y))
+    return a.number < b.number;
   return abs(a.x)+abs(a.y) < abs(b.x)+abs(b.y);
 }
 
