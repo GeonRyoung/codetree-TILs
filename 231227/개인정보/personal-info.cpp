@@ -27,6 +27,8 @@ int main(){
   for(int i=0;i<5;i++){
     cin >> p[i].name >> p[i].height >> p[i].weight;
   }
+  cout <<fixed;
+  cout.precision(1);
   sort(p,p+5,cmp_name);
   printf("name\n");
   for(int i=0;i<5;i++){
