@@ -31,7 +31,7 @@ int main(){
     p[i]=person(name,height,weight);
   }
   sort(p,p+5,cmp);
-  for(int i=0;i<5;i++){
+  for(int i=0;i<n;i++){
     cout << p[i].name << " " << p[i].height << " " << p[i].weight << endl;
   }
 }
