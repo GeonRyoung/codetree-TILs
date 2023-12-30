@@ -16,10 +16,10 @@ int main(){
   int month=m1;
   int ans=0;
   while(1){
-    d1++;
-    day++;
     if(str[day]==s)
       ans++;
+    d1++;
+    day++;
     if(d1>months[month]){
       d1=1;
       m1++;
@@ -30,5 +30,7 @@ int main(){
     if(m1==m2&&d1==d2){
       break;}
   }
+  if(str[day]==s)
+      ans++;
   cout << ans;
 }
