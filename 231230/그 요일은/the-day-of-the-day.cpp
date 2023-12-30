@@ -16,6 +16,8 @@ int main(){
   int month=m1;
   int ans=0;
   while(1){
+    if(m1==m2&&d1==d2){
+      break;}
     if(str[day]==s)
       ans++;
     d1++;
@@ -27,8 +29,6 @@ int main(){
     }
     if(day>7)
       day=1;
-    if(m1==m2&&d1==d2){
-      break;}
   }
   if(str[day]==s)
       ans++;
