@@ -12,7 +12,9 @@ int main(){
   for(int i=m1;i<=m2;i++){
     total+=months[i];
   }
-  if(m1==m2&&d1==d2)
+  if(m1==m2&&d1==d2){
     total=1;
-  printf("%d",total-a);
+    printf("%d",total);}
+  else
+    printf("%d",total-a);
 }
