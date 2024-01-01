@@ -15,7 +15,7 @@ int main(){
     }
     else if(di=='L'){
       for(int i=0;i<x;i++){
-        arr[cnt--]+=1;
+        arr[--cnt]+=1;
       }
     }
   }
