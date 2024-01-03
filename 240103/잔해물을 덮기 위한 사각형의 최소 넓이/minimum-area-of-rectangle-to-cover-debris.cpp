@@ -20,7 +20,7 @@ int main(){
         if(i==0)
           arr[j][k]=1;
         else
-          arr[j][k]=0;
+          arr[j-1][k]=0;
       }
     }
   }
@@ -35,7 +35,7 @@ int main(){
       }
     }
   }
-  if(xmin>=2000||ymin>=2000|xmax<=0||ymax<=0){
+  if(xmin>=2000||ymin>=2000||xmax<=0||ymax<=0){
     printf("0");
   }
   else
