@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -15,29 +16,33 @@ int main(){
     int x1,y1,x2,y2;
     (void)scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
     x1+=OFFSET;y1+=OFFSET;x2+=OFFSET;y2+=OFFSET;
-    for(int j=x1;j<=x2;j++){
-      for(int k=y1;k<=y2;k++){
-        if(i==0)
-          arr[j][k]=1;
-        else
-          arr[j-1][k]=0;
+    if(i==0)
+      for(int j=x1;j<x2;j++){
+        for(int k=y1;k<y2;k++)
+            arr[j][k]=1;
       }
-    }
+    else
+      for(int j=x1;j<x2;j++){
+        for(int k=y1;k<y2;k++)
+           arr[j][k]=0;
+      }
   }
+  bool first_rect_exist=false;
   for(int i=0;i<=2001;i++){
     for(int j=0;j<=2001;j++){
       if(arr[i][j]!=0){
+        first_rect_exist = true;
         xmax=max(xmax,i);
         xmin=min(xmin,i);
         ymax=max(ymax,j);
         ymin=min(ymin,j);
-        sum+=1;
       }
     }
   }
-  if(xmin>=2000||ymin>=2000||xmax<=0||ymax<=0){
+  if(!first_rect_exist){
     printf("0");
   }
   else
     printf("%d",(xmax-xmin)*(ymax-ymin));
+  return 0;
 }
