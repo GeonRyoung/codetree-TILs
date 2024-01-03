@@ -35,7 +35,7 @@ int main(){
       }
     }
   }
-  if(xmin>=1000||ymin>=1000|xmax<=0||ymax<=0){
+  if(xmin>=2000||ymin>=2000|xmax<=0||ymax<=0){
     printf("0");
   }
   else
