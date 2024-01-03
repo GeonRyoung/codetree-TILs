@@ -43,6 +43,6 @@ int main(){
     printf("0");
   }
   else
-    printf("%d",(xmax-xmin)*(ymax-ymin));
+    printf("%d",(xmax-xmin+1)*(ymax-ymin+1));
   return 0;
 }
