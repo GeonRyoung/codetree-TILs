@@ -15,8 +15,8 @@ int main(){
     int x1,y1,x2,y2;
     (void)scanf("%d %d %d %d",&x1,&y1,&x2,&y2);
     x1+=OFFSET;y1+=OFFSET;x2+=OFFSET;y2+=OFFSET;
-    for(int j=x1;j<x2;j++){
-      for(int k=y1;k<y2;k++){
+    for(int j=x1;j<=x2;j++){
+      for(int k=y1;k<=y2;k++){
         if(i==0)
           arr[j][k]=1;
         else
@@ -24,8 +24,8 @@ int main(){
       }
     }
   }
-  for(int i=0;i<2002;i++){
-    for(int j=0;j<2002;j++){
+  for(int i=0;i<=2001;i++){
+    for(int j=0;j<=2001;j++){
       if(arr[i][j]!=0){
         xmax=max(xmax,i);
         xmin=min(xmin,i);
@@ -35,7 +35,9 @@ int main(){
       }
     }
   }
-  if(sum==0)
-    xmax=0;xmin=0;ymax=0;ymin=0;
-  printf("%d",(xmax-xmin)*(ymax-ymin));
+  if(xmin>=1000||ymin>=1000|xmax<=0||ymax<=0){
+    printf("0");
+  }
+  else
+    printf("%d",(xmax-xmin)*(ymax-ymin));
 }
