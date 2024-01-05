@@ -8,7 +8,7 @@ int B_location[1000001];
 
 int main(){
   int a,b;
-  (void)scanf("%d %d",&a,&b);
+  cin >> a >> b;
   int time_a=1;
   int time_b=1;
   int ans=-1;
@@ -25,13 +25,13 @@ int main(){
   }
   for(int i=0;i<b;i++){
     char dire;int t;
-     cin >> dire >> t;
+    cin >> dire >> t;
     while(t--){
       if(dire=='R')
         B_location[time_b]=B_location[time_b-1]+1;
       else
-        B_location[time_a]=B_location[time_b-1]-1;
-        time_b++;
+        B_location[time_b]=B_location[time_b-1]-1;
+      time_b++;
     }
   }
   for(int i=1;i<time_a;i++){
