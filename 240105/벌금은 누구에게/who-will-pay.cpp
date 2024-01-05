@@ -13,15 +13,17 @@ int main(){
   for(int i=1;i<=m;i++){
     cin >> penalty[i];
   }
-  for(int i=1;i<=n;i++){
-    for(int j=1;j<=m;j++){
-      if(penalty[j]==i){
-        point[i]+=1;
+  for(int i=1;i<=m;i++){
+    for(int j=1;j<=n;j++){
+      if(penalty[i]==j){
+        point[j]+=1;
       }
-      if(point[i]==k){
-        ans=i;
-        break;
-      }
+    }
+  }
+  for(int j=1;j<=n;j++){
+    if(point[j]>=k){
+      ans=j;
+      break;
     }
   }
   printf("%d",ans);
