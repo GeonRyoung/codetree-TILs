@@ -6,9 +6,8 @@
 
 using namespace std;
 
-int pos_n[100001];
-int pos_m[100001];
-int compare[100001];
+int pos_n[1000001];
+int pos_m[1000001];
 
 int main(){
   int n,m;
