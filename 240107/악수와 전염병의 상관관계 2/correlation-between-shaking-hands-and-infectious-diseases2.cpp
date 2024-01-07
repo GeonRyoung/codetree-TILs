@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int infect[101];
-int infect_cnt[101];
+int infect[100];
+int infect_cnt[100];
 
 class Infect{
   public:
@@ -29,7 +29,7 @@ int main(){
   int N,K,P,T;
   (void)scanf("%d %d %d %d",&N,&K,&P,&T);
   infect[P-1]=1;
-  Infect infect_list[100];
+  Infect infect_list[251];
   for(int i=0;i<T;i++){
     int t,x,y;
     (void)scanf("%d %d %d",&t,&x,&y);
@@ -41,7 +41,7 @@ int main(){
       infect_cnt[infect_list[i].x]++;
       infect[infect_list[i].y]=1;
     }
-    if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
+    else if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
       infect_cnt[infect_list[i].y]++;
       infect[infect_list[i].x]=1;
     }
