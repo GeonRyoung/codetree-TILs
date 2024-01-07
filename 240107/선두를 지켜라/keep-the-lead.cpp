@@ -12,7 +12,7 @@ int main(){
   for(int i=0;i<n;i++){
     int v,t;
     (void)scanf("%d %d",&v,&t);
-    for(int i=0;i<t;i++){
+    while(t--){
       pos_n[time_n]=pos_n[time_n-1]+v;
       time_n++;
     }
@@ -20,25 +20,23 @@ int main(){
   for(int i=0;i<m;i++){
     int v,t;
     (void)scanf("%d %d",&v,&t);
-    for(int i=0;i<t;i++){
+    while(t--){
       pos_m[time_m]=pos_m[time_m-1]+v;
       time_m++;
     }
   }
+  int leader=0;
   for(int i=1;i<time_n;i++){
-    if(pos_n[i]>pos_m[i])
-      compare[i]=1;
-    else if(pos_n[i]<pos_m[i])
-      compare[i]=-1;
-    else
-      compare[i]=0;
-  }
-  for(int i=2;i<time_n;i++){
-    if(compare[i-1]*compare[i]==-1)
-      ans++;
-    if(i>=3&&compare[i-2]*compare[i]==-1&&compare[i-1]==0)
-      ans++;
-  }
-  printf("%d",ans);
-  
+    if(pos_n[i]>pos_m[i]){
+      if(leader==2)
+        ans++;
+      leader=1;
+    }
+    else if(pos_n[i]<pos_m[i]){
+      if(leader==1)
+        ans++;
+      leader=2;
+    }
+  }  
+  printf("%d",ans);  
 }
