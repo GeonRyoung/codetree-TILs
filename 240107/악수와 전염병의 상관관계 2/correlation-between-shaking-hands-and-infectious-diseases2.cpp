@@ -41,7 +41,7 @@ int main(){
       infect_cnt[infect_list[i].x]++;
       infect[infect_list[i].y]=1;
     }
-    else if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
+    if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
       infect_cnt[infect_list[i].y]++;
       infect[infect_list[i].x]=1;
     }
