@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int infect[101];
-int infect_cnt[101];
+int infect[100];
+int infect_cnt[100];
 
 class Infect{
   public:
@@ -37,20 +37,19 @@ int main(){
     }
   sort(infect_list,infect_list+T,cmp);  
   for(int i=0;i<T;i++){
-    if(infect_cnt[infect_list[i].x]<K&&infect[infect_list[i].x]==1){
+    if((infect_cnt[infect_list[i].x]<K&&infect[infect_list[i].x]==1)&&(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1)){
+      infect_cnt[infect_list[i].x]++;
+      infect[infect_list[i].y]=1;
+      infect_cnt[infect_list[i].y]++;
+      infect[infect_list[i].x]=1;
+    }
+    else if(infect_cnt[infect_list[i].x]<K&&infect[infect_list[i].x]==1){
       infect_cnt[infect_list[i].x]++;
       infect[infect_list[i].y]=1;
     }
     else if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
       infect_cnt[infect_list[i].y]++;
       infect[infect_list[i].x]=1;
-    }
-    if(infect_cnt[infect_list[i].y]<K&&infect[infect_list[i].y]==1){
-      if(infect_cnt[infect_list[i].x]<K&&infect[infect_list[i].x]==1){
-        infect[infect_list[i].y]=0;
-        infect_cnt[infect_list[i].y]++;
-        infect[infect_list[i].x]=1;
-        infect[infect_list[i].y]=1;}
     }
   }
   for(int i=0;i<N;i++){
