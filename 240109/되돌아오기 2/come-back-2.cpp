@@ -17,11 +17,11 @@ int main(){
       dir_num=(dir_num+1)%4;
     else if(dir=='L') 
       dir_num=(dir_num+3)%4;
-    else {
+    else 
       x=x+dx[dir_num],y=y+dy[dir_num];
-      if(x==1&&y==1)
-        break;}
     cnt++;
+    if(x==1&&y==1)
+        break;
   }
   if(x==1&&y==1)
     printf("%d",cnt);
