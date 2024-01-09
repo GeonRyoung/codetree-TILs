@@ -17,18 +17,22 @@ int main(){
   (void)scanf("%d",&n);
   int x=1,y=1,cnt=0;;
   for(int i=0;i<n;i++){
-    char dir;int dis;
+    char dir;int dis;int endflag=0;
     (void)scanf(" %c %d",&dir,&dis);
     int dir_num=dire(dir);
     for(int i=0;i<dis;i++){
       x=x+dx[dir_num],y=y+dy[dir_num];
       cnt++;
       if(x==1&&y==1){
-        printf("%d",cnt);
+        endflag=1;
         break;
       }
     }
+    if(endflag) break;
   }
-  if(x!=1||y!=1) printf("-1");
+  if(x==1&&y==1) 
+    printf("%d",cnt);
+  else 
+    printf("-1");
   return 0;
 }
