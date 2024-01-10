@@ -55,7 +55,7 @@ int main() {
         for(int j = 0; j < n; j++)
             cin >> arr[i][j];
     cin >> start_num;
-    Initialize(start_num);.
+    Initialize(start_num);
     int move_num = Simulate(); 
     cout << move_num;
     return 0;
