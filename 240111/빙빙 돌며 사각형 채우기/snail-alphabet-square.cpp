@@ -23,7 +23,10 @@ int main(){
     x=x+dx[dir_num];y=y+dy[dir_num];
     visit[x][y]=1;
     arr[x][y]=cnt;
-    cnt++;
+    if(cnt<'Z')
+      cnt++;
+    else
+      cnt='A';
   } 
   for(int i=1;i<=n;i++){
     for(int j=1;j<=m;j++)
