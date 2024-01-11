@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int n;
-char arr[101][101];
+int arr[101][101];
 int visit[101][101];
 int dx[4]={0,1,0,-1},dy[4]={1,0,-1,0};
 bool InRange(int x,int y){
@@ -29,5 +29,4 @@ int main(){
     }
     printf("\n");
   }
-  return 0;
 }
