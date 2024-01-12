@@ -15,16 +15,14 @@ int main(){
   (void)scanf("%d %d",&n,&t);
   int x,y;
   x=n/2+1,y=n/2+1;
-  int cnt=1;
+  string order;
+  cin >> order;
   for(int i=1;i<=n;i++){
     for(int j=1;j<=n;j++){
-      arr[i][j]=cnt;
-      cnt++;
+      (void)scanf("%d",&arr[i][j]);
     }
   }
   int dir=3;
-  string order;
-  cin >> order;
   int ans=arr[x][y];
   for(int i=0;i<t;i++){
     if(order[i]=='R')
