@@ -16,9 +16,9 @@ int main(){
   }
   int cnt=0;
   for(int i=1;i<=n;i++){
-    for(int j=0;j<=n-2;j++){
-      for(int k=0;k<=n;k++){
-        for(int l=0;l<=n-2;l++){
+    for(int j=1;j<=n-2;j++){
+      for(int k=1;k<=n;k++){
+        for(int l=1;l<=n-2;l++){
           if(i==k&&abs(j-l)<=2)
             continue;
           int cnt1=arr[i][j]+arr[i][j+1]+arr[i][j+2];
