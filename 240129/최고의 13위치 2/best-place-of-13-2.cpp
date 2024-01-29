@@ -22,7 +22,7 @@ int main(){
           if(i==k&&abs(j-l)<=2)
             continue;
           int cnt1=arr[i][j]+arr[i][j+1]+arr[i][j+2];
-          int cnt2=arr[k][l]+arr[k][l+1]|arr[k][l+2];
+          int cnt2=arr[k][l]+arr[k][l+1]+arr[k][l+2];
           cnt=max(cnt,cnt1+cnt2);
         }
       }
