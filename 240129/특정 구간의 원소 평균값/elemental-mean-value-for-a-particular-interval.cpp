@@ -18,8 +18,8 @@ int main(){
         sum+=arr[k];
       }
       double mid_val=(double)sum/(j-i+1);
-      for(int k=1;k<=n;k++){
-        if(arr[k]==mid_val){
+      for(int k=i;k<=j;k++){
+        if((double)arr[k]==mid_val){
           cnt++;
           break;
         }
