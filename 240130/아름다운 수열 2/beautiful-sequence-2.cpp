@@ -21,6 +21,7 @@ int main(){
     int sum=0;
     for(int j=i;j<i+m;j++){
       sum+=point[arr[j]];
+      point[arr[j]]=0;
     }
     if(sum==m)
       cnt++;
