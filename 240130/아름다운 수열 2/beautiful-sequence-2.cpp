@@ -4,6 +4,7 @@
 
 int arr[MAX_NUM];
 int point[MAX_NUM];
+int visit[MAX_NUM];
 
 int main(){
   int n,m;
@@ -19,9 +20,12 @@ int main(){
   int cnt=0;
   for(int i=1;i<=n-m+1;i++){
     int sum=0;
+    for(int j=1;j<=n;j++){
+      visit[j]=point[j];
+    }
     for(int j=i;j<i+m;j++){
-      sum+=point[arr[j]];
-      point[arr[j]]=0;
+      sum+=visit[arr[j]];
+      visit[arr[j]]=0;
     }
     if(sum==m)
       cnt++;
