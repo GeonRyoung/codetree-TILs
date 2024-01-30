@@ -2,9 +2,9 @@
 
 #define MAX_NUM 101
 
-int arr[MAX_NUM];
-int point[MAX_NUM];
-int visit[MAX_NUM];
+int arr[MAX_NUM+1];
+int point[MAX_NUM+1];
+int visit[MAX_NUM+1];
 
 int main(){
   int n,m;
