@@ -17,7 +17,7 @@ int main(){
     if(b=='G') arr[a]=1;
     else if(b=='H') arr[a]=2;
   }
-  int ans=INT_MIN;
+  int ans=0;
   for(int i=1;i<=MAX_NUM;i++){
     for(int j=i+1;j<=MAX_NUM;j++){
       if(arr[i]==0 || arr[j]==0) continue;
