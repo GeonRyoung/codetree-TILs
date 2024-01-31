@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <algorithm>
+#include <climits>
 
 using namespace std;
 
@@ -19,10 +20,10 @@ int main(){
   for(int i=1;i<=6;i++){
     (void)scanf("%d",&arr[i]);
   }
-  int cnt=1000000;
+  int cnt=INT_MAX;
   for(int i=1;i<=6;i++){
     for(int j=i+1;j<=6;j++){
-      for(int k=j+1;j<=6;j++){
+      for(int k=j+1;k<=6;k++){
         cnt=min(cnt,average(i,j,k));
       }
     }
